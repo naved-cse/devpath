@@ -41,6 +41,30 @@ const RoadmapDetail = () => {
       <div className="text-white text-center py-20">Roadmap not found.</div>
     );
   }
+
+  const icons = {
+    Monitor: Monitor,
+    Brain: Brain,
+    Server: Server,
+  };
+
+  const MainIcon = icons[roadmap.icon] || Monitor;
+
+  const activeSection = roadmap.sections.find((s) => s.id === activeSectionId);
+  const activeSectionIndex = roadmap.sections.findIndex(
+    (s) => s.id === activeSectionId,
+  );
+
+  const cycleStatus = (topicId) => {
+    setTopicProgress((prev) => {
+      const currentStatus = prev[topicId];
+      let nextStatus = "inprogress";
+      if (currentStatus === "inprogress") nextStatus = "done";
+      if (currentStatus === "done") nextStatus = "notstarted";
+
+      return { ...prev, [topicId]: nextStatus };
+    });
+  };
 };
 
 export default RoadmapDetail;
