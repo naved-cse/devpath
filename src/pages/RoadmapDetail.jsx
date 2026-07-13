@@ -65,6 +65,26 @@ const RoadmapDetail = () => {
       return { ...prev, [topicId]: nextStatus };
     });
   };
+
+  const calculateSectionProgress = (section) => {
+    if (!section.topics || section.topics.length === 0) return 0;
+    const doneCount = section.topics.filter(
+      (t) => topicProgress[t.id] === "done",
+    ).length;
+    return Math.round((doneCount / section.topics.length) * 100);
+  };
+
+  const totalRoadmapTopics = roadmap.sections.reduce((acc, sec) => {
+    return (
+      acc +
+      (sec.topics?.filter((t) => topicProgress[t.id] === "done").length || 0)
+    );
+  }, 0);
+
+  const overallProgress =
+    totalRoadmapTopics === 0
+      ? 0
+      : Math.round((totalCompletedTopics / totalRoadmapTopics) * 100);
 };
 
 export default RoadmapDetail;
