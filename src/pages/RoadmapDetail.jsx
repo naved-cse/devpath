@@ -85,6 +85,34 @@ const RoadmapDetail = () => {
     totalRoadmapTopics === 0
       ? 0
       : Math.round((totalCompletedTopics / totalRoadmapTopics) * 100);
+
+  const StatusBadge = ({ status }) => {
+    if (status === "done") {
+      return (
+        <div className="flex items-center gap-1.5 px-3 py-1 bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-semibold rounded-md">
+          Done <Check className="w-3.5 h-3.5" />
+        </div>
+      );
+    }
+    if (status === "inprogress") {
+      return (
+        <div className="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs font-semibold rounded-md">
+          In Progress
+        </div>
+      );
+    }
+    return (
+      <div className="px-3 py-1 bg-slate-800 border border-slate-700 text-xs font-semibold rounded-md">
+        Not Started
+      </div>
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-[#0F172A] flex flex-col lg:flex-row font-sans">
+      <div className="w-full lg:w-[380px] bg-[#0F172A] lg:border-r border-slate-800 p-6 flex flex-col flex-shrink-0"></div>
+    </div>
+  );
 };
 
 export default RoadmapDetail;
