@@ -110,7 +110,39 @@ const RoadmapDetail = () => {
 
   return (
     <div className="min-h-screen bg-[#0F172A] flex flex-col lg:flex-row font-sans">
-      <div className="w-full lg:w-[380px] bg-[#0F172A] lg:border-r border-slate-800 p-6 flex flex-col flex-shrink-0"></div>
+      <div className="w-full lg:w-[380px] bg-[#0F172A] lg:border-r border-slate-800 p-6 flex flex-col flex-shrink-0">
+        <Link
+          to="/roadmaps"
+          className=" flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-medium mb-8 transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" /> Back to Roadmaps
+        </Link>
+
+        <div className=" bg-slate-800/40 border border-slate-700/50 rounded-xl p-6 mb-8">
+          <div className="flex items-center gap-4 mb-4">
+            <div className=" bg-slate-900/80 p-3 border border-slate-700/50 rounded-lg">
+              <MainIcon className="w-6 h-6 text-cyan-400" />
+            </div>
+            <h2 className="text-white text-xl font-bold">{roadmap.title}</h2>
+          </div>
+          <p className="text-slate-400 text-sm leading-relaxed mb-6">
+            {roadmap.description}
+          </p>
+
+          <div className="flex justify-between text-sm mb-2">
+            <span className=" text-slate-300 font-medium">
+              Overall Progress
+            </span>
+            <span className="text-slate-300">{overallProgress}%</span>
+          </div>
+          <div className=" w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+            <div
+              className="bg-cyan-400 h-full rounded-full transition-all duration-500 ease-out"
+              style={{ width: `${overallProgress}%` }}
+            ></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
