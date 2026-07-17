@@ -12,6 +12,7 @@ import {
   Check,
 } from "lucide-react";
 import roadmaps from "../data/roadmaps";
+import useProgress from "../hooks/userProgress";
 
 const RoadmapDetail = () => {
   const { id } = useParams();
@@ -21,21 +22,21 @@ const RoadmapDetail = () => {
   const [activeSectionId, setActiveSectionId] = useState(null);
 
   // Storing progress in state
-  const [topicProgress, setTopicProgress] = useState({});
+  const [topicProgress, setTopicProgress] = useProgress(id);
 
   // Initialize active section when roadmap loads
   useEffect(() => {
     if (roadmap && roadmap.sections.length > 0) {
       setActiveSectionId(roadmap.sections[0].id);
 
-      // Initialize default statuses based on data
-      const initialProgress = {};
-      roadmap.sections.forEach((section) => {
-        section.topics?.forEach((topic) => {
-          initialProgress[topic.id] = topic.status || "notstarted";
-        });
-      });
-      setTopicProgress(initialProgress);
+      // // Initialize default statuses based on data
+      // const initialProgress = {};
+      // roadmap.sections.forEach((section) => {
+      //   section.topics?.forEach((topic) => {
+      //     initialProgress[topic.id] = topic.status || "notstarted";
+      //   });
+      // });
+      // setTopicProgress(initialProgress);
     }
   }, [roadmap]);
 
