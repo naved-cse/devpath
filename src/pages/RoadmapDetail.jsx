@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import roadmaps from "../data/roadmaps";
 import useProgress from "../hooks/userProgress";
+import TopicModal from "../components/TopicModal";
+import DSAModal from "../components/DSAModal";
 
 const RoadmapDetail = () => {
   const { id } = useParams();
@@ -23,6 +25,8 @@ const RoadmapDetail = () => {
 
   // Storing progress in state
   const [topicProgress, setTopicProgress] = useProgress(id);
+
+  const [selectedTopic, setSelectedTopic] = useState(null);
 
   // Initialize active section when roadmap loads
   useEffect(() => {
@@ -238,7 +242,7 @@ const RoadmapDetail = () => {
                 return (
                   <div
                     key={topic.id}
-                    onClick={() => cycleStatus(topic.id)}
+                    onClick={() => setSelectedTopic(topic)}
                     className="group flex items-center justify-between p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-slate-600 cursor-pointer transition-colors"
                   >
                     <div className="flex items-center gap-4">
@@ -252,7 +256,14 @@ const RoadmapDetail = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                      <StatusBadge status={currentStatus} />
+                      <div
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          cycleStatus(topic.id);
+                        }}
+                      >
+                        <StatusBadge status={currentStatus} />
+                      </div>
                       <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-slate-400 transition-colors" />
                     </div>
                   </div>
@@ -262,6 +273,19 @@ const RoadmapDetail = () => {
           </div>
         )}
       </div>
+      {/* Dynamic Modal Logic */}
+      {selectedTopic &&
+        (selectedTopic.questions ? (
+          <DSAModal
+            topic={selectedTopic}
+            onClose={() => setSelectedTopic(null)}
+          />
+        ) : (
+          <TopicModal
+            topic={selectedTopic}
+            onClose={() => setSelectedTopic(null)}
+          />
+        ))}
     </div>
   );
 };
