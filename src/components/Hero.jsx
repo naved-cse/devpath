@@ -4,16 +4,16 @@ import { Map, BookOpen, Gift } from "lucide-react";
 const Hero = () => {
   return (
     <section className="bg-slate-900 flex flex-col items-center text-center  py-24 min-h-screen">
-      <h1 className="text-white text-5xl font-bold tracking-tight mb-6">
+      <h1 className="text-white text-3xl md:text-5xl font-bold tracking-tight mb-6">
         Master Your <span className="text-cyan-400">Dev Journey</span>
       </h1>
 
-      <p className="text-slate-400 text-lg max-w-2xl mb-10 leading-relaxed">
+      <p className="text-slate-400 text-mid md:text-lg max-w-sm md:max-w-2xl mb-10 leading-relaxed">
         Track structured roadmaps, learn in layers, and become the developer{" "}
         <br className="hidden md:block" /> you aspire to be.
       </p>
 
-      <div className="flex gap-6">
+      <div className="flex gap-3 md:gap-6">
         <Link
           to="/roadmaps"
           className="bg-cyan-400 text-slate-900 px-8 py-3 rounded-md font-semibold transition-colors hover:bg-cyan-300"
