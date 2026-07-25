@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="flex items-center justify-center md:justify-start gap-4 bg-slate-800 border border-slate-700 px-6 py-4 rounded-xl min-w-[160px]">
           <Map className="text-cyan-400 shrink-0" size={32} />
           <div className="text-left">
-            <div className="text-white font-bold text-xl">5+</div>
+            <div className="text-white font-bold text-xl">3+</div>
             <div className="text-slate-400 text-sm">Roadmaps</div>
           </div>
         </div>
