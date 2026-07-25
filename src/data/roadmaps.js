@@ -9,30 +9,85 @@ const roadmaps = [
         id: "basics",
         title: "The Basics",
         topics: [
-          { id: "html", title:"HTML Fundamentals", status:"notstarted"},
-          { id: "css", title:"CSS Basics", status:"notstarted"},
-          { id: "flexbox", title:"Flexbox", status:"notstarted"},
-          { id: "grid", title:"CSS Grid", status:"notstarted"},
+          { id: "html", 
+            title:"HTML Fundamentals", 
+            status:"notstarted",
+            description: "HTML is the standard markup language used to create the basic structure and content of web pages.",
+            usedIn: "Used everywhere on the web to define headers, paragraphs, links, images, and layout blocks."},
+          { id: "css", 
+            title:"CSS Basics", 
+            status:"notstarted",
+            description: "CSS (Cascading Style Sheets) is used to style and visually format HTML elements, controlling layout, colors, fonts, spacing, and responsiveness.",
+            usedIn: "Applied in web pages to design user interfaces, create responsive layouts, and enhance user experience with animations and transitions."
+          },
+          { id: "flexbox", 
+            title:"Flexbox", 
+            status:"notstarted",
+            description: "Flexbox (Flexible Box Layout) is a CSS layout module that provides an efficient way to align and distribute space among items in a container, even when their size is dynamic.",
+            usedIn: "Used to build responsive navigation bars, center elements vertically and horizontally, and create flexible layouts without relying on floats or positioning hacks."
+          },
+          { id: "grid", 
+            title:"CSS Grid", 
+            status:"notstarted",
+            description: "CSS Grid is a powerful layout system that allows developers to create complex, two-dimensional grid-based designs with rows and columns.",
+            usedIn: "Used for building entire page layouts, dashboards, galleries, and any design requiring precise control over both rows and columns."},
         ]
       },
       {
         id: "styling",
         title: "Styling Frameworks",
         topics: [
-          { id: "bootstrap", title: "Bootstrap", status:"notstarted"},
-          { id: "tailwind", title:"Tailwind CSS", status:"notstarted"},
+          { id: "bootstrap", 
+            title: "Bootstrap", 
+            status:"notstarted",
+            description: "Bootstrap is a popular front-end framework that provides pre-designed CSS and JavaScript components for building responsive, mobile-first websites quickly.",
+            usedIn: "Used to create consistent layouts, navigation bars, modals, forms, and grids without writing extensive custom CSS."
+          },
+          { id: "tailwind", 
+            title:"Tailwind CSS",  
+            status:"notstarted",
+            description: "Tailwind CSS is a utility-first CSS framework that allows developers to style elements directly in HTML using small, reusable utility classes.",
+            usedIn: "Used to build highly customizable designs, streamline styling workflows, and rapidly prototype modern, responsive interfaces."
+          },
         ]
       },
       {
         id: "javascript",
         title: "JavaScript",
         topics: [
-          { id: "variables", title: "Variables", status: "notstarted" },
-          { id: "functions", title: "Functions", status: "notstarted" },
-          { id: "arrays", title: "Arrays", status: "notstarted" },
-          { id: "objects", title: "Objects", status: "notstarted" },
-          { id: "dom", title: "DOM", status: "notstarted" },
-          { id: "es6", title: "ES6+", status: "notstarted" }
+          { id: "variables", 
+            title: "Variables", 
+            status: "notstarted",
+            description: "Variables are containers for storing data values in programming, allowing developers to reuse and manipulate information throughout their code.",
+            usedIn: "Used to hold numbers, strings, objects, or other data types in JavaScript programs for calculations, logic, and dynamic behavior."
+           },
+          { id: "functions", 
+            title: "Functions", 
+            status: "notstarted",
+            description: "Functions are reusable blocks of code designed to perform specific tasks when called, helping organize and modularize programs.",
+            usedIn: "Used to execute logic repeatedly, handle events, process inputs, and structure code for clarity and maintainability."
+           },
+          { id: "arrays", 
+            title: "Arrays", 
+            status: "notstarted",
+            description: "Arrays are ordered collections of values stored under a single variable name, accessible by index.",
+            usedIn: "Used to manage lists of data such as numbers, strings, or objects, and to perform operations like iteration, sorting, and filtering."
+           },
+          { id: "objects",
+            title: "Objects",
+            status: "notstarted",
+            description: "Objects are collections of key-value pairs that represent structured data and allow grouping related information together.",
+            usedIn: "Used to model real-world entities, store configurations, and build complex data structures in JavaScript." },
+          { id: "dom",
+            title: "DOM",
+            status: "notstarted",
+            description: "The DOM (Document Object Model) is a programming interface that represents the structure of a web page as a tree of nodes.",
+            usedIn: "Used to dynamically manipulate HTML and CSS, update content, handle user interactions, and create interactive web applications." },
+          { id: "es6",
+            title: "ES6+",
+            status: "notstarted",
+            description: "ES6+ refers to modern versions of JavaScript (ECMAScript 2015 and beyond) that introduced new syntax and features for cleaner, more powerful code.",
+            usedIn: "Used to write modern JavaScript with features like arrow functions, classes, template literals, modules, promises, and async/await." }
         ]
       },
       {
