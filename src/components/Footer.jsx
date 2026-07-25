@@ -14,7 +14,12 @@ const Footer = () => {
         <Link to="/roadmaps" className="hover:text-cyan-400 transition-colors">
           Roadmaps
         </Link>
-        <a href="#" className="hover:text-cyan-400 transition-colors">
+        <a
+          href="https://github.com/naved-cse"
+          className="hover:text-cyan-400 transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub
         </a>
       </div>
