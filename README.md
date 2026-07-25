@@ -94,6 +94,6 @@ This project is licensed under the MIT License — see the [LICENSE](./LICENSE) 
 ## 👤 Author
 
 **Naved**
-Built as a personal project while learning React — 2nd year CSE student.
+Built as a personal project while learning React — 3rd year CSE student.
 
 - GitHub: [@naved-cse](https://github.com/naved-cse)
