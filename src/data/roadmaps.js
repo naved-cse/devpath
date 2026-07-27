@@ -94,21 +94,75 @@ const roadmaps = [
         id: "react",
         title: "React",
         topics: [
-          { id: "components", title: "Components", status: "notstarted" },
-          { id: "props", title: "Props", status: "notstarted" },
-          { id: "state", title: "State", status: "notstarted" },
-          { id: "hooks", title: "Hooks", status: "notstarted" },
-          { id: "router", title: "Router", status: "notstarted" }
+          {
+            id: "components",
+            title: "Components",
+            status: "notstarted",
+            description: "Components are reusable building blocks in React that encapsulate UI elements and logic into independent, manageable pieces.",
+            usedIn: "Used to create modular user interfaces, improve code reusability, and simplify complex application structures."
+          },
+          {
+            id: "props",
+            title: "Props",
+            status: "notstarted",
+            description: "Props (short for properties) are inputs passed to React components that allow dynamic customization and data flow between components.",
+            usedIn: "Used to pass data from parent to child components, configure component behavior, and enable reusability."
+          },
+          {
+            id: "state",
+            title: "State",
+            status: "notstarted",
+            description: "State is a built-in React object that stores dynamic data and determines how components render and behave over time.",
+            usedIn: "Used to manage interactive features like form inputs, toggles, counters, and any data that changes within a component."
+          },
+          {
+            id: "hooks",
+            title: "Hooks",
+            status: "notstarted",
+            description: "Hooks are special functions in React that let developers use state and lifecycle features in functional components.",
+            usedIn: "Used to manage state, handle side effects, access context, and simplify logic without writing class components."
+          },
+          {
+            id: "router",
+            title: "Router",
+            status: "notstarted",
+            description: "React Router is a library that enables navigation and routing in React applications, allowing multiple views and URLs.",
+            usedIn: "Used to build single-page applications with dynamic navigation, nested routes, and URL-based rendering."
+          }
         ]
       },
       {
         id: "tools",
         title: "Tools",
         topics: [
-          { id: "git", title: "Git", status: "notstarted" },
-          { id: "github", title: "GitHub", status: "notstarted" },
-          { id: "vscode", title: "VS Code", status: "notstarted" },
-          { id: "devtools", title: "Chrome DevTools", status: "notstarted" }
+          {
+            id: "git",
+            title: "Git",
+            status: "notstarted",
+            description: "Git is a distributed version control system that tracks changes in source code, enabling collaboration and history management.",
+            usedIn: "Used to manage code versions, collaborate with teams, and maintain project history through commits, branches, and merges."
+          },
+          {
+            id: "github",
+            title: "GitHub",
+            status: "notstarted",
+            description: "GitHub is a cloud-based platform built around Git that provides hosting, collaboration tools, and project management features for developers.",
+            usedIn: "Used to share repositories, collaborate on open-source projects, manage issues, and integrate with CI/CD pipelines."
+          },
+          {
+            id: "vscode",
+            title: "VS Code",
+            status: "notstarted",
+            description: "Visual Studio Code (VS Code) is a lightweight, open-source code editor developed by Microsoft with support for debugging, extensions, and integrated Git.",
+            usedIn: "Used to write, debug, and manage code efficiently with features like IntelliSense, extensions, and built-in terminal."
+          },
+          {
+            id: "devtools",
+            title: "Chrome DevTools",
+            status: "notstarted",
+            description: "Chrome DevTools is a set of web developer tools built into the Google Chrome browser for inspecting and debugging web applications.",
+            usedIn: "Used to analyze performance, debug JavaScript, inspect DOM and CSS, and optimize web applications directly in the browser."
+          }
         ]
       }
     ]
