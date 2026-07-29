@@ -681,50 +681,170 @@ const roadmaps = [
         id: "nodejs",
         title: "Node.js Basics",
         topics: [
-          { id: "intro", title: "What is Node.js", status: "notstarted" },
-          { id: "modules", title: "Modules & require", status: "notstarted" },
-          { id: "fs", title: "File System", status: "notstarted" },
-          { id: "events", title: "Event Loop", status: "notstarted" }
+          {
+            id: "intro",
+            title: "What is Node.js",
+            status: "notstarted",
+            description: "Node.js is a runtime environment built on Chrome's V8 JavaScript engine that allows developers to run JavaScript code outside of the browser.",
+            usedIn: "Used to build scalable server-side applications, APIs, and real-time services like chat apps and streaming platforms."
+          },
+          {
+            id: "modules",
+            title: "Modules & require",
+            status: "notstarted",
+            description: "Modules in Node.js are reusable pieces of code that can be imported and exported using the require function or ES6 import/export syntax.",
+            usedIn: "Used to organize code into separate files, share functionality across projects, and leverage built-in or third-party libraries."
+          },
+          {
+            id: "fs",
+            title: "File System",
+            status: "notstarted",
+            description: "The File System (fs) module in Node.js provides an API for interacting with the file system, enabling reading, writing, and managing files and directories.",
+            usedIn: "Used to create, read, update, and delete files, handle file streams, and manage directories in server-side applications."
+          },
+          {
+            id: "events",
+            title: "Event Loop",
+            status: "notstarted",
+            description: "The Event Loop is the core mechanism in Node.js that handles asynchronous operations, allowing non-blocking execution of code.",
+            usedIn: "Used to manage callbacks, promises, and async tasks like I/O operations, ensuring Node.js applications remain fast and responsive."
+          }
         ]
       },
       {
         id: "express",
         title: "Express.js",
         topics: [
-          { id: "routing", title: "Routing", status: "notstarted" },
-          { id: "middleware", title: "Middleware", status: "notstarted" },
-          { id: "req-res", title: "Request & Response", status: "notstarted" },
-          { id: "error-handling", title: "Error Handling", status: "notstarted" }
+          {
+            id: "routing",
+            title: "Routing",
+            status: "notstarted",
+            description: "Routing in Express.js refers to defining how an application responds to client requests for specific URLs and HTTP methods.",
+            usedIn: "Used to handle GET, POST, PUT, DELETE requests, organize endpoints, and build RESTful APIs."
+          },
+          {
+            id: "middleware",
+            title: "Middleware",
+            status: "notstarted",
+            description: "Middleware in Express.js are functions that execute during the request-response cycle, allowing modification of requests and responses.",
+            usedIn: "Used for tasks like authentication, logging, parsing request bodies, error handling, and adding custom logic between routes."
+          },
+          {
+            id: "req-res",
+            title: "Request & Response",
+            status: "notstarted",
+            description: "Request and Response objects in Express.js represent the HTTP request sent by the client and the response returned by the server.",
+            usedIn: "Used to access client data (query, params, body), send responses (JSON, HTML, files), and control the communication between client and server."
+          },
+          {
+            id: "error-handling",
+            title: "Error Handling",
+            status: "notstarted",
+            description: "Error handling in Express.js involves catching and managing errors that occur during the request-response cycle using middleware functions.",
+            usedIn: "Used to provide meaningful error messages, prevent crashes, and ensure smooth user experience by handling unexpected issues gracefully."
+          }
         ]
       },
       {
         id: "mongodb",
         title: "MongoDB",
         topics: [
-          { id: "nosql-basics", title: "NoSQL Basics", status: "notstarted" },
-          { id: "mongoose", title: "Mongoose ODM", status: "notstarted" },
-          { id: "crud", title: "CRUD Operations", status: "notstarted" },
-          { id: "schemas", title: "Schemas & Models", status: "notstarted" }
+          {
+            id: "nosql-basics",
+            title: "NoSQL Basics",
+            status: "notstarted",
+            description: "NoSQL databases are non-relational data storage systems designed to handle large volumes of unstructured or semi-structured data.",
+            usedIn: "Used for scalable applications, real-time analytics, and flexible data models like documents, key-value pairs, and graphs."
+          },
+          {
+            id: "mongoose",
+            title: "Mongoose ODM",
+            status: "notstarted",
+            description: "Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js that provides schema-based solutions to model application data.",
+            usedIn: "Used to define schemas, enforce validation, and simplify interactions with MongoDB through an intuitive API."
+          },
+          {
+            id: "crud",
+            title: "CRUD Operations",
+            status: "notstarted",
+            description: "CRUD stands for Create, Read, Update, and Delete — the four basic operations for managing data in databases.",
+            usedIn: "Used to perform fundamental database tasks such as inserting new records, retrieving data, updating existing entries, and removing records."
+          },
+          {
+            id: "schemas",
+            title: "Schemas & Models",
+            status: "notstarted",
+            description: "Schemas in Mongoose define the structure of documents within a MongoDB collection, while models are constructors compiled from those schemas.",
+            usedIn: "Used to enforce data consistency, apply validation rules, and interact with collections through model instances."
+          }
         ]
       },
       {
         id: "rest-apis",
         title: "REST APIs",
         topics: [
-          { id: "http-methods", title: "HTTP Methods", status: "notstarted" },
-          { id: "status-codes", title: "Status Codes", status: "notstarted" },
-          { id: "postman", title: "Testing with Postman", status: "notstarted" },
-          { id: "api-design", title: "API Design Patterns", status: "notstarted" }
+          {
+            id: "http-methods",
+            title: "HTTP Methods",
+            status: "notstarted",
+            description: "HTTP methods define the types of actions that can be performed on resources in a web application, such as retrieving or modifying data.",
+            usedIn: "Used to implement RESTful APIs with operations like GET for fetching data, POST for creating, PUT/PATCH for updating, and DELETE for removing resources."
+          },
+          {
+            id: "status-codes",
+            title: "Status Codes",
+            status: "notstarted",
+            description: "HTTP status codes are standardized responses sent by servers to indicate the result of a client’s request.",
+            usedIn: "Used to communicate success (200 OK), client errors (404 Not Found), server errors (500 Internal Server Error), and other outcomes in API responses."
+          },
+          {
+            id: "postman",
+            title: "Testing with Postman",
+            status: "notstarted",
+            description: "Postman is a popular API testing tool that allows developers to send requests, inspect responses, and automate testing workflows.",
+            usedIn: "Used to test endpoints, debug APIs, manage collections of requests, and streamline API development and collaboration."
+          },
+          {
+            id: "api-design",
+            title: "API Design Patterns",
+            status: "notstarted",
+            description: "API design patterns are best practices and structures for building scalable, maintainable, and user-friendly APIs.",
+            usedIn: "Used to ensure consistency, improve developer experience, and support scalability through approaches like REST, GraphQL, and versioning strategies."
+          }
         ]
       },
       {
         id: "authentication",
         title: "Authentication",
         topics: [
-          { id: "jwt", title: "JWT (JSON Web Tokens)", status: "notstarted" },
-          { id: "hashing", title: "Password Hashing (bcrypt)", status: "notstarted" },
-          { id: "sessions", title: "Cookies & Sessions", status: "notstarted" },
-          { id: "auth-middleware", title: "Auth Middleware", status: "notstarted" }
+          {
+            id: "jwt",
+            title: "JWT (JSON Web Tokens)",
+            status: "notstarted",
+            description: "JWTs are compact, URL-safe tokens used to securely transmit information between parties as a JSON object.",
+            usedIn: "Used for stateless authentication, transmitting user identity, and authorizing access to protected resources in APIs."
+          },
+          {
+            id: "hashing",
+            title: "Password Hashing (bcrypt)",
+            status: "notstarted",
+            description: "Password hashing is the process of converting plain-text passwords into irreversible strings using algorithms like bcrypt.",
+            usedIn: "Used to securely store user passwords, protect against data breaches, and verify credentials without exposing raw passwords."
+          },
+          {
+            id: "sessions",
+            title: "Cookies & Sessions",
+            status: "notstarted",
+            description: "Cookies and sessions are mechanisms for maintaining user state across multiple requests in web applications.",
+            usedIn: "Used to track logged-in users, store preferences, and manage authentication flows in client-server communication."
+          },
+          {
+            id: "auth-middleware",
+            title: "Auth Middleware",
+            status: "notstarted",
+            description: "Auth middleware in frameworks like Express.js are functions that validate user authentication and authorization during the request-response cycle.",
+            usedIn: "Used to protect routes, enforce access control, and ensure only authenticated users can perform certain actions."
+          }
         ]
       }
     ]
