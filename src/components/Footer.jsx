@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { Zap } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className=" bg-slate-900 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center px-6 md:px-8 py-6 gap-6 md:gap-0">
       <div className="text-cyan-400 text-xl font-bold flex items-center gap-1">
-        <span className=" text-cyan-400">⚡</span> DevPath
+        <Zap className="text-cyan-400 w-5 h-5" />
+        DevPath
       </div>
 
       <div className="flex gap-6 md:gap-8 text-slate-400 font-medium">

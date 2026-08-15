@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Zap } from "lucide-react";
 
 const Navbar = () => {
   // Piece 1: State to track if the mobile menu is open
@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="relative bg-slate-900 text-white flex justify-between items-center px-6 md:px-8 py-4 border-b border-slate-800">
       {/* Logo */}
       <Link to="/" className="flex items-center gap-2">
-        <span className="text-xl">⚡</span>
+        <Zap className="text-cyan-400 w-6 h-6" />
         <span className="text-cyan-400 text-2xl font-bold tracking-wide">
           DevPath
         </span>

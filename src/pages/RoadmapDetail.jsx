@@ -126,7 +126,7 @@ const RoadmapDetail = () => {
 
   return (
     <div className="min-h-screen bg-[#0F172A] flex flex-col lg:flex-row font-sans">
-      {/* ================= LEFT SIDEBAR ================= */}
+      {/* LEFT SIDEBAR*/}
       <div className="w-full lg:w-[380px] bg-[#0F172A] lg:border-r border-slate-800 p-6 flex flex-col flex-shrink-0">
         {/* Back Link */}
         <Link
@@ -207,7 +207,7 @@ const RoadmapDetail = () => {
         </div>
       </div>
 
-      {/* ================= RIGHT MAIN CONTENT ================= */}
+      {/*  RIGHT MAIN CONTENT */}
       <div className="flex-1 p-8 lg:p-12 overflow-y-auto">
         {activeSection && (
           <div className="max-w-4xl mx-auto">
